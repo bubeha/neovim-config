@@ -6,6 +6,7 @@ return {
 
         configs.setup({
             ensure_installed = {
+                "bash",
                 "c",
                 "lua",
                 "vim",
@@ -14,9 +15,14 @@ return {
                 "elixir",
                 "heex",
                 "javascript",
+                "typescript",
                 "html",
+                "php",
+                "go",
+                "json",
             },
             sync_install = false,
+            auto_install = false,
             highlight = {
                 enable = true,
             },
