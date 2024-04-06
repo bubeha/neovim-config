@@ -33,7 +33,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "tsserver",
-                "golangci_lint_ls",
+                "gopls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -56,6 +56,27 @@ return {
                         }
                     }
                 end,
+
+                ["gopls"] = function()
+                    local lspconfig = require('lspconfig')
+
+                    lspconfig.gopls.setup {
+                        capabilities = capabilities,
+                        cmd = { "gopls", "serve" },
+                        filetypes = { "go", "gomod" },
+                        root_dir = lspconfig.util.root_pattern("go.mod", ".git"),
+                        settings = {
+                            gopls = {
+                                completeUnimported = true,
+                                usePlaceholders = true,
+                                staticcheck = true,
+                                analyses = {
+                                    unusedparams = true,
+                                },
+                            },
+                        },
+                    }
+                end
             }
         })
 
