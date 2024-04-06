@@ -1,9 +1,9 @@
 return {
     'numToStr/Comment.nvim',
-    config = function ()
+    config = function()
         require('Comment').setup()
 
-        vim.keymap.set('n', '<C-/>', function ()
+        vim.keymap.set('n', '<C-/>', function()
             require('Comment.api').toggle.linewise.current()
         end, {})
 
