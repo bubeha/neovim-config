@@ -24,3 +24,6 @@ vim.opt.listchars:append({
 })
 
 vim.opt.colorcolumn = "120"
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
