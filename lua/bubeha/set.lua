@@ -18,12 +18,14 @@ vim.opt.termguicolors = true
 
 vim.opt.list = true
 vim.opt.listchars:append({
-    tab = '→\\ ',
-    trail = '•',
-    space = '•',
+	tab = "→\\ ",
+	trail = "•",
+	space = "•",
 })
 
 vim.opt.colorcolumn = "120"
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+vim.o.termguicolors = true
