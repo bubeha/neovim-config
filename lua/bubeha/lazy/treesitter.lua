@@ -15,6 +15,7 @@ return {
                 "heex",
                 "javascript",
                 "typescript",
+                "tsx",
                 "html",
                 "php",
                 "go",
