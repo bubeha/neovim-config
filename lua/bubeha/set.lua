@@ -13,8 +13,14 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.opt.swapfile = false
+vim.opt.backup = false
 
 vim.opt.termguicolors = true
+
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+
+vim.opt.updatetime = 50
 
 vim.opt.list = true
 vim.opt.listchars:append({
@@ -28,4 +34,3 @@ vim.opt.colorcolumn = "120"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.o.termguicolors = true
